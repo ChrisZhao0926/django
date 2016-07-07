@@ -94,11 +94,12 @@ AUTHENTICATION_BACKENDS = (
 
 # Email Settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_HOST = 'smtpem1.sonyericsson.net'
 EMAIL_PORT = 25
 EMAIL_HOST_USER = 'chris.zhao@sonymobile.com'
 EMAIL_USE_TLS = False
-EMAIL_SUBJECT_PREFIX = '[RFT]'
+EMAIL_SUBJECT_PREFIX = '[Test]'
 SERVER_EMAIL = 'chris.zhao@sonymobile.com'
 
 
