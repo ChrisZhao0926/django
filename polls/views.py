@@ -20,3 +20,6 @@ def sendmail():
                          from_email=from_addr, to=to_addr, cc=cc_list)
     email.send()
     return HttpResponse('sending')
+
+def adcd(request):
+    issue_list = request.REQUEST.getlist()
