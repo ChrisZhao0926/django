@@ -4,5 +4,6 @@ from polls import views
 
 urlpatterns = patterns('',
                        url(r'^$', views.index, name='index'),
-                       url(r'^sendmail/$', views.sendmail(), name='sendemail'),
+                       # url(r'^sendmail/$', views.sendmail(), name='sendemail'),
+                       url(r'^check/$', views.check_request, name='check'),
                        )

@@ -21,5 +21,7 @@ def sendmail():
     email.send()
     return HttpResponse('sending')
 
-def adcd(request):
-    issue_list = request.REQUEST.getlist()
+
+def check_request(request):
+    my_path = request.path
+    return HttpResponse(my_path)
