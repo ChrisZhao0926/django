@@ -5,12 +5,12 @@ import smtplib
 FROM_ADDR = 'SG-CNBJ-omv-tools-git-G@sonymobile.com'
 SMTP_SERVER = 'smtpem1.sonyericsson.net'
 TO_ADDR = 'chris.zhao@sonymobile.com'
-CC_ADDR = 'SG-CNBJ-omv-tools-git-G@sonymobile.com'
+CC_ADDR = 'DL-CNBJ-FOTA-EMMA-Lab@sonymobile.com'
 
 msg = MIMEText('Hello, just confirm receive mail by DL , please ignore', 'plain', 'utf-8')
 msg['From'] = 'SG-CNBJ-omv-tools-git-G'
 msg['To'] = Header('Chris')
-msg['Cc'] = 'SG-CNBJ-omv-tools-git-G@sonymobile.com'
+msg['Cc'] = 'DL-CNBJ-FOTA-EMMA-Lab@sonymobile.com'
 
 msg['Subject'] = '[Test]Python email'
 
