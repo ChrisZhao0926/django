@@ -1,4 +1,6 @@
 # .idea
 .idea/
 db.sqlite3
-*.pyc
+*.py[cod]
+.gitignore
+mysite/*.pyc
