@@ -1,0 +1,3 @@
+import pymssql
+
+pymssql.connect()
