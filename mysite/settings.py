@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'guardian',
     'easy_thumbnails',
     'accounts',
+    'djcelery'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -139,3 +140,11 @@ USERENA_ACTIVATION_REQUIRED = False
 # USERENA_HIDE_EMAIL = False
 # USERENA_HTML_EMAIL = False
 # USERENA_USE_PLAIN_TEMPLATE = True
+
+
+# Celery
+BROKER_URL = 'amqp://'
+CELERY_RESULT_BACKEND = 'amqp'  # ImportError: Import by filename is not supported.
+# CELERY_RESULT_BACKEND = 'djcelery.backends.database:DatabaseBackend'
+CELERY_TASK_RESULT_EXPIRES = 18000  # 5 hours
+CELERY_TIMEZONE = 'Asia/Shanghai'
