@@ -8,5 +8,6 @@ urlpatterns = patterns('',
                        url(r'^check/$', views.check_request, name='check'),
                        url(r'^name/$', views.get_name, name='get_name'),
                        url(r'^add/$', views.add, name='add'),
+                       url(r'^get_user/$', views.get_user, name='get_user'),
                        url(r'^add_post/$', views.add_form, name='add'),
                        )

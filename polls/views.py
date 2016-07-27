@@ -3,6 +3,7 @@ from django.core.mail import EmailMessage
 import os
 from .forms import NameForm, AddForm
 from django.shortcuts import render
+from user import get_tester
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'mysite.settings'
 
@@ -59,4 +60,9 @@ def add_form(request):
     else:
         form = AddForm()
     return render(request, 'polls/add_post.html', {'form': form})
+
+
+def get_user(request):
+    get_tester()
+    return HttpResponse('ok')
 
