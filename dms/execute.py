@@ -11,12 +11,33 @@
 
 from dms import dms_manager
 from dms import sqlquery
-from dms import config
+import datetime.time
 
 
 def rft_cav():
-    dms = dms_manager.DMS(server=config.SERVER, user=config.USERNAME, pwd=config.PASSWORD, db=config.DB_NAME)
-    result = dms.execute(sqlquery.RFT_CAV)
+    dms = dms_manager.DMS()
+    dms.execute(sqlquery.RFT_CAV)
+
+
+def qualify_cav():
+    dms = dms_manager.DMS()
+    dms.execute(sqlquery.QUALIFY_CAV)
+
+
+def rft_lv():
+    dms = dms_manager.DMS()
+    dms.execute(sqlquery.RFT_LV)
+
+
+def qualify_lv():
+    dms = dms_manager.DMS()
+    dms.execute(sqlquery.QUALIFY_LV)
+
+
+def lr_lv():
+    dms = dms_manager.DMS()
+    dms.execute(sqlquery.LR_LV)
 
 if __name__ == '__main__':
-    rft_cav()
+    datetime.datetime.now()
+    lr_lv()

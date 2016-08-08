@@ -41,7 +41,8 @@ INSTALLED_APPS = (
     'guardian',
     'easy_thumbnails',
     'accounts',
-    'djcelery'
+    'djcelery',
+    'chart_tools',
 )
 
 MIDDLEWARE_CLASSES = (

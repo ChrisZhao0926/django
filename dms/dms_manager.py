@@ -13,11 +13,11 @@ from dms import config
 
 
 class DMS:
-    def __init__(self, server, user, pwd, db):
-        self.server = server
-        self.user = user
-        self.pwd = pwd
-        self.db = db
+    def __init__(self):
+        self.server = config.SERVER
+        self.user = config.USERNAME
+        self.pwd = config.PASSWORD
+        self.db = config.DB_NAME
 
     def __get_connect(self):
         if not self.db:
@@ -32,16 +32,19 @@ class DMS:
     def execute(self,sql):
         cursor = self.__get_connect()
         cursor.execute(sql)
+
         for row in cursor:
             print('row = %r' % (row,))
         result = cursor.fetchall()
+        total = cursor.rowcount
+        print('total count %r' % (total,))
         self.conn.close()
         return result
 
 
 def main():
 
-    ms = DMS(server=config.SERVER, user=config.USERNAME, pwd=config.PASSWORD, db=config.DB_NAME)
+    ms = DMS()
     resList = ms.execute()
     for row in resList:
         print('row = %r' % (row,))
