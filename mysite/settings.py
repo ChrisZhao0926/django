@@ -37,12 +37,12 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'polls',
-    'userena',
-    'guardian',
-    'easy_thumbnails',
-    'accounts',
-    'djcelery',
-    'chart_tools',
+    #'userena',
+    #'guardian',
+    #'easy_thumbnails',
+    #'accounts',
+    #'djcelery',
+    #'chart_tools',
 )
 
 MIDDLEWARE_CLASSES = (
